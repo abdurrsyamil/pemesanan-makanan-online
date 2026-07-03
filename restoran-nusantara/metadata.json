@@ -1,0 +1,6 @@
+{
+  "name": "Restoran Nusantara",
+  "description": "Aplikasi pemesanan makanan dan manajemen menu real-time untuk Restoran Nusantara dengan pelacakan peta dan notifikasi pesanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
