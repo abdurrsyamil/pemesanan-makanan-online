@@ -80,7 +80,7 @@ export default function AdminDashboard({
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Heading Banner */}
-      <div className="bg-gradient-to-r from-red-600 via-orange-500 to-orange-400 rounded-2xl p-6 sm:p-8 text-white shadow-lg mb-8 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-red-700 via-amber-500 to-yellow-500 rounded-2xl p-6 sm:p-8 text-white shadow-lg mb-8 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
           <Database className="h-48 w-48 -mr-10 -mb-10" />
         </div>
@@ -89,7 +89,7 @@ export default function AdminDashboard({
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-sans">
               Dashboard Admin Restoran Nusantara
             </h2>
-            <p className="text-xs sm:text-sm text-orange-50 font-mono">
+            <p className="text-xs sm:text-sm text-red-50 font-mono">
               Kelola Database Hidangan & Pantau Status Pesanan Pelanggan Secara Real-time
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function AdminDashboard({
             {!isAdding && (
               <button
                 onClick={() => setIsAdding(true)}
-                className="px-4 py-2 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md flex items-center space-x-1.5 cursor-pointer"
+                className="px-4 py-2 bg-gradient-to-r from-red-700 to-amber-500 hover:from-red-800 hover:to-amber-600 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md flex items-center space-x-1.5 cursor-pointer"
               >
                 <Plus className="h-4 w-4" />
                 <span>Tambah Menu Baru</span>
@@ -155,17 +155,17 @@ export default function AdminDashboard({
           {isAdding && (
             <form
               onSubmit={handleAddSubmit}
-              className="bg-orange-50/50 rounded-2xl border border-orange-200 p-6 shadow-sm space-y-4 animate-fade-in"
+              className="bg-red-50/40 rounded-2xl border border-red-100 p-6 shadow-sm space-y-4 animate-fade-in"
             >
-              <div className="flex justify-between items-center pb-2 border-b border-orange-200/50">
-                <h4 className="font-bold text-orange-950 flex items-center space-x-1">
-                  <Sparkles className="h-4 w-4 text-orange-600" />
+              <div className="flex justify-between items-center pb-2 border-b border-red-200/30">
+                <h4 className="font-bold text-red-950 flex items-center space-x-1">
+                  <Sparkles className="h-4 w-4 text-red-600" />
                   <span>Form Tambah Menu Baru ke Database</span>
                 </h4>
                 <button
                   type="button"
                   onClick={() => setIsAdding(false)}
-                  className="p-1 hover:bg-orange-100 rounded-full text-orange-700 cursor-pointer"
+                  className="p-1 hover:bg-red-100 rounded-full text-red-700 cursor-pointer"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -173,26 +173,26 @@ export default function AdminDashboard({
 
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 <div className="md:col-span-4">
-                  <label className="block text-xs font-bold text-orange-900 mb-1">Nama Menu</label>
+                  <label className="block text-xs font-bold text-red-900 mb-1">Nama Menu</label>
                   <input
                     type="text"
                     required
                     value={nama_menu}
                     onChange={(e) => setNamaMenu(e.target.value)}
                     placeholder="Contoh: Es Campur Nusantara"
-                    className="w-full px-3 py-2 bg-white border border-orange-200 rounded-xl text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    className="w-full px-3 py-2 bg-white border border-red-100 rounded-xl text-sm focus:ring-2 focus:ring-red-600 focus:outline-none"
                   />
                 </div>
 
                 <div className="md:col-span-2">
-                  <label className="block text-xs font-bold text-orange-900 mb-1">Harga (IDR)</label>
+                  <label className="block text-xs font-bold text-red-900 mb-1">Harga (IDR)</label>
                   <input
                     type="number"
                     required
                     value={harga}
                     onChange={(e) => setHarga(e.target.value)}
                     placeholder="Contoh: 15000"
-                    className="w-full px-3 py-2 bg-white border border-orange-200 rounded-xl text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
+                    className="w-full px-3 py-2 bg-white border border-red-100 rounded-xl text-sm focus:ring-2 focus:ring-red-600 focus:outline-none"
                   />
                 </div>
 

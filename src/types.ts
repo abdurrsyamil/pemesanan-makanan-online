@@ -17,7 +17,7 @@ export interface User {
   id: string;
   nama: string;
   email: string;
-  role: 'user' | 'admin';
+  role: 'customer' | 'admin' | 'koki' | 'kurir' | 'user';
 }
 
 export interface Order {
